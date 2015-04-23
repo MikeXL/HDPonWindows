@@ -56,8 +56,9 @@ yes.
 
 ### 9. configure hive (optional: as I like to use SQL server for meta store)
 
-Download SQL server JDBC and place it to %HIVE_HOME%\lib  
-Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder.
+1. Download SQL server JDBC and place it to %HIVE_HOME%\lib  
+2. In SQL server, create a new database for HIVE, I have it named as HIVE owned by a user hive with password Hadoop1234  
+3. Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder in this repo for setup  
 
 
 ### 10. start hive
