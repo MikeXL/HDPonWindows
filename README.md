@@ -1,4 +1,4 @@
-# HDPonWindows
+# HDP on Windows
 
 
 here is how it works
