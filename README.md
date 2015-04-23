@@ -68,7 +68,7 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
 
 
 
-### 11. start hcat
+### 11. start hcat (really needed?)
 
 
 
@@ -76,10 +76,11 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
 
 
 Last but not least thanks to  
-[Hadoop on Windows wiki page][1]  
-[Hive wiki page to setup metastore][2]  
-
+1. [Hadoop on Windows wiki page][1]  
+2. [Hive wiki page to setup metastore][2]   
+3. [Using Hive for Data Analysis][3] - a very quickstart type to use hive  
 
 
 [1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows "Hadoop on Windows Wiki"
 [2]: https://cwiki.apache.org/confluence/display/Hive/HiveDerbyServerMode#HiveDerbyServerMode-ConfigureHivetoUseNetworkDerby "Configure HIVE"
+[3]: http://hortonworks.com/hadoop-tutorial/using-hive-data-analysis/ "Using Hive for Data Analysis"
