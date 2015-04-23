@@ -41,7 +41,7 @@ I have it uploaded
 ### 7. start yarn
     %HADOOP_HOME%\sbin\start-yarn.cmd
 
-then fire up your browswer, go http://localhost:8088  
+then fire up your browswer, again, in my case http://unicorn:8088  
 yes.
 
 ### 8. create hive data warehouse structure (folders)
@@ -63,7 +63,7 @@ Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder.
 ### 10. start hive
 Thought it is very complicated, and following thru the scripts hortonworks made. Then, it is a very simple way:
 
-  %HIVE_HOME%\bin\hive --service hiveserver2  
+    %HIVE_HOME%\bin\hive --service hiveserver2  
 
 
 
