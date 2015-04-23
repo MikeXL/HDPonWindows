@@ -61,14 +61,18 @@ yes.
 3. Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder in this repo for setup  
 
 
-### 10. start hive
+### 10. start hive services
 Thought it is very complicated, and following thru the scripts hortonworks made. Then, it is a very simple way:
 
     %HIVE_HOME%\bin\hive --service hiveserver2  
 
 
+### 11. connect to hive
+  Connect via hive client on the same box, simply type in *hive*  
+  Connect via ODBC, just remember to punch in the username hive and password setup for the metastore
 
-### 11. start hcat (really needed?)
+
+### 12. start hcat (really needed?)
 
 
 
@@ -77,7 +81,7 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
 
 Last but not least thanks to  
 1. [Hadoop on Windows wiki page][1]  
-2. [Hive wiki page to setup metastore][2]   
+2. [Hive wiki page to setup metastore][2]
 3. [Using Hive for Data Analysis][3] - a very quickstart type to use hive  
 
 
