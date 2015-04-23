@@ -8,7 +8,7 @@ here is how it works
 ### 1. unpack the msi file
 What? Yes, you hear me. As I had enough frustration to launch the msi over and over again, just doesn't work  
 
-    msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=E:\\ 
+    msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=E:\\
 
 *now take back your driver seat and steering wheel, easy*
 
@@ -25,11 +25,11 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
     SET HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop  
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%  
-    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin 
+    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin
 
-and run %HADOOP_HOME%\etc\hadoop\hadoop-env.cmd 
+and run %HADOOP_HOME%\etc\hadoop\hadoop-env.cmd
 
-### 4. edit the xml configuration files 
+### 4. edit the xml configuration files
 I have it uploaded
 
 ### 5. format HDFS
@@ -52,7 +52,7 @@ yes.
     %HADOOP_HOME%/bin/hadoop fs -mkdir       /user/hive/warehouse
     %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /tmp
     %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /user/hive/warehouse
-  
+
 
 ### 9. configure hive (optional: as I like to use SQL server for meta store)
 
@@ -61,7 +61,7 @@ Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder.
 
 
 ### 10. start hive
-Thought it is very complicated, and following thru the scripts hortonworks made. Then, it is a very simple way: 
+Thought it is very complicated, and following thru the scripts hortonworks made. Then, it is a very simple way:
 
   %HIVE_HOME%\bin\hive --service hiveserver2  
 
@@ -73,10 +73,12 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
 
 
 
-  
+
 Last but not least thanks to  
-[Hadoop on Windows wiki page][1]
+[Hadoop on Windows wiki page][1]  
+[Hive wiki page to setup metastore][2]  
 
 
 
 [1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows "Hadoop on Windows Wiki"
+[2]: https://cwiki.apache.org/confluence/display/Hive/HiveDerbyServerMode#HiveDerbyServerMode-ConfigureHivetoUseNetworkDerby "Configure HIVE"
