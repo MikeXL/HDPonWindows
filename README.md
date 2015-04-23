@@ -4,12 +4,18 @@
 here is how it works
 
 ### 0. download hdp from hortonworks, easy
+<<<<<<< Updated upstream
 Prerequisites still required, such as  
 
 - Python (I've got 2.7.6 x64 to keep consistent with other computer, such as my Mac)  
 - Java (I went a bit far, got 8)  
 - Viscual C++ 2010 SP1 Redistributable x64  
 - PowerShell 3.0 if you are on windows 2008 R2; not needed if you are on Windows 10 (oh yes)  
+=======
+And I assume you know the prerequisites - Python and Java, PowerShell if you may.  
+I had Python 2.7.6 x64 installed just to keep on same version as my Mac.  
+Java 8 to taste the latest brew.  
+>>>>>>> Stashed changes
 
 ### 1. unpack the msi file
 What? Yes, you hear me. As I had enough frustration to launch the msi over and over again, just doesn't work  
