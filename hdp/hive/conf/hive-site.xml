@@ -1,4 +1,3 @@
-
 <configuration>
 <property>
   <name>javax.jdo.option.ConnectionURL</name>
@@ -14,9 +13,12 @@
   <name>javax.jdo.option.ConnectionUserName</name>
   <value>hive</value>
 </property>
-
 <property>
   <name>javax.jdo.option.ConnectionPassword</name>
   <value>Hadoop1234</value>
 </property>
+  <property>
+    <name>hive.server2.authentication</name>
+    <value>NONE</value>
+  </property>
 </configuration>
