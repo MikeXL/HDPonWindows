@@ -8,7 +8,7 @@ here is how it works
 ### 1. unpack the msi file
 What? Yes, you hear me. As I had enough frustration to launch the msi over and over again, just doesn't work  
 
-<code>msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=E:\\ </code>
+    msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=E:\\ 
 
 *now take back your driver seat and steering wheel, easy*
 
@@ -19,26 +19,26 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
 
 ### 3. Set environment variables
 (path used as above sample)  
-<code>
-set HADOOP_HOME=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
-SET HIVE_HOME=E:\hdp-2.2.4.2\hive-0.14.0.2.2.4.2-0002  
-set HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
-set HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop  
-set YARN_CONF_DIR=%HADOOP_CONF_DIR%  
-set PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin  
-</code>
+
+    SET HADOOP_HOME=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
+    SET HIVE_HOME=E:\hdp-2.2.4.2\hive-0.14.0.2.2.4.2-0002  
+    SET HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
+    SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop  
+    SET YARN_CONF_DIR=%HADOOP_CONF_DIR%  
+    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin 
+
 
 ### 4. edit the xml configuration files 
 I have it uploaded
 
 ### 5. format HDFS
-<code>%HADOOP_HOME%\bin\hdfs namenode -format</code>
+    %HADOOP_HOME%\bin\hdfs namenode -format
 
 ### 6. start hadoop
-<code>%HADOOP_HOME%\sbin\start-dfs.cmd</code>
+    %HADOOP_HOME%\sbin\start-dfs.cmd
 
 ### 7. start yarn
-<code>%HADOOP_HOME%\sbin\start-yarn.cmd</code>
+    %HADOOP_HOME%\sbin\start-yarn.cmd
 
 then go to http://localhost:8088
 yes.
