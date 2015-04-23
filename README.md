@@ -44,9 +44,24 @@ I have it uploaded
 then fire up your browswer, go http://localhost:8088  
 yes.
 
-### 8. start hive
+### 8. create hive data warehouse structure (folders)
+
+    %HADOOP_HOME%/bin/hadoop fs -mkdir       /tmp
+    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user
+    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user/hive
+    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user/hive/warehouse
+    %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /tmp
+    %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /user/hive/warehouse
   
-  
+
+### 9. start hive
+
+
+### 10. start hcat
+
+
+
+
 
   
 Last but not least thanks to  
