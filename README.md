@@ -27,6 +27,7 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%  
     SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin 
 
+and run %HADOOP_HOME%\etc\hadoop\hadoop-env.cmd 
 
 ### 4. edit the xml configuration files 
 I have it uploaded
@@ -44,9 +45,13 @@ then go to http://localhost:8088
 yes.
 
 ### 8. start hive
+  
+  
+
+  
+Last but not least thanks to  
+[Hadoop on Windows wiki page][1]
 
 
 
-
-
-[1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows
+[1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows "Hadoop on Windows Wiki"
