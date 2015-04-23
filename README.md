@@ -25,9 +25,9 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
     SET HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop  
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%  
-    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%/bin
+    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin
 
-and run %HADOOP_HOME%\etc\hadoop\hadoop-env.cmd
+or run env.cmd (uploaded in the hdp folder inside this repo).
 
 ### 4. edit the xml configuration files
 I have it uploaded
