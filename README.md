@@ -18,7 +18,7 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
 3. unzip the rest if needed, such as tez and spark
 
 ### 3. Set environment variables
-(path used as above sample)  
+(path used as above sample, other than below, ensure python in the PATH and JAVA_HOME is set.)  
 
     SET HADOOP_HOME=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
     SET HIVE_HOME=E:\hdp-2.2.4.2\hive-0.14.0.2.2.4.2-0002  
@@ -54,10 +54,20 @@ yes.
     %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /user/hive/warehouse
   
 
-### 9. start hive
+### 9. configure hive (optional: as I like to use SQL server for meta store)
+
+Download SQL server JDBC and place it to %HIVE_HOME%\lib  
+Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder.
 
 
-### 10. start hcat
+### 10. start hive
+Thought it is very complicated, and following thru the scripts hortonworks made. Then, it is a very simple way: 
+
+  %HIVE_HOME%\bin\hive --service hiveserver2  
+
+
+
+### 11. start hcat
 
 
 
