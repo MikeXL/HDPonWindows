@@ -41,7 +41,7 @@ I have it uploaded
 ### 7. start yarn
     %HADOOP_HOME%\sbin\start-yarn.cmd
 
-then go to http://localhost:8088
+then fire up your browswer, go http://localhost:8088  
 yes.
 
 ### 8. start hive
