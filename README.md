@@ -82,9 +82,9 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
 ### 12. Spark
 It is as simple as this to run spark on yarn interactively if you have the spark binary built with yarn support.  
 
-    pyspark --master *yarn-client*
+    pyspark --master yarn-client
 
-use yarn-master when submitting an spark app.  for instance,
+use yarn-master when submitting an spark app.  for instance,  
 
   %spark_home%\bin\spark-submit.cmd --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --master yarn-custer spark-internal
 
