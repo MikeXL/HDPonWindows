@@ -2,6 +2,7 @@ REM Just an example, you can create your own
 
 SET HADOOP_HOME=c:\hdp\hadoop
 SET HIVE_HOME=c:\hdp\hive
+SET SPARK_HOME=c:\hdp\spark
 SET HADOOP_PREFIX=c:\hdp\hadoop2
 SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoo
 SET YARN_CONF_DIR=%HADOOP_CONF_DIR%

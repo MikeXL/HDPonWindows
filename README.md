@@ -47,7 +47,7 @@ I have it uploaded
 ### 7. start yarn
     %HADOOP_HOME%\sbin\start-yarn.cmd
 
-then fire up your browswer, again, in my case http://unicorn:8088  
+then fire up your browser, again, in my case http://unicorn:8088  
 yes.
 
 ### 8. create hive data warehouse structure (folders)
@@ -64,7 +64,7 @@ yes.
 
 1. Download SQL server JDBC and place it to %HIVE_HOME%\lib  
 2. In SQL server, create a new database for HIVE, I have it named as HIVE owned by a user hive with password Hadoop1234  
-3. Checkout the hive-site.xml cnofiguration file in the hdp/hive/conf folder in this repo for setup  
+3. Checkout the hive-site.xml configuration file in the hdp/hive/conf folder in this repo for setup  
 
 
 ### 10. start hive services
@@ -83,7 +83,8 @@ It is as simple as this to run spark on yarn interactively if you have the spark
 
     pyspark --master *yarn-client*
 
-use yarn-master when submitting an spark app.  
+use yarn-master when submitting an spark app.  for instance,
+%spark_home%\bin\spark-submit.cmd --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --master yarn-custer spark-internal
 
 
 #### 13. hive on tez
