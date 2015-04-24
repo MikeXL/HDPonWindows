@@ -1,0 +1,202 @@
+
+hdp
+├───hadoop
+│   ├───bin
+│   ├───etc
+│   │   └───hadoop
+│   ├───include
+│   ├───libexec
+│   ├───logs
+│   ├───sbin
+│   └───share
+│       ├───doc
+│       │   └───hadoop
+│       │       ├───common
+│       │       ├───hdfs
+│       │       ├───mapreduce
+│       │       └───yarn
+│       └───hadoop
+│           ├───common
+│           │   ├───jdiff
+│           │   ├───lib
+│           │   ├───sources
+│           │   └───templates
+│           ├───hdfs
+│           │   ├───jdiff
+│           │   ├───lib
+│           │   ├───sources
+│           │   ├───templates
+│           │   └───webapps
+│           │       ├───datanode
+│           │       │   └───WEB-INF
+│           │       ├───hdfs
+│           │       │   └───WEB-INF
+│           │       ├───journal
+│           │       │   └───WEB-INF
+│           │       ├───secondary
+│           │       │   └───WEB-INF
+│           │       └───static
+│           │           └───bootstrap-3.0.2
+│           │               ├───css
+│           │               ├───fonts
+│           │               └───js
+│           ├───kms
+│           │   └───tomcat
+│           │       ├───bin
+│           │       ├───conf
+│           │       ├───lib
+│           │       ├───logs
+│           │       ├───temp
+│           │       ├───webapps
+│           │       │   ├───kms
+│           │       │   │   ├───META-INF
+│           │       │   │   └───WEB-INF
+│           │       │   │       ├───classes
+│           │       │   │       └───lib
+│           │       │   └───ROOT
+│           │       │       └───WEB-INF
+│           │       └───work
+│           ├───mapreduce
+│           │   ├───lib
+│           │   ├───lib-examples
+│           │   └───sources
+│           ├───tools
+│           │   ├───lib
+│           │   ├───sls
+│           │   │   ├───bin
+│           │   │   ├───html
+│           │   │   │   ├───css
+│           │   │   │   └───js
+│           │   │   │       └───thirdparty
+│           │   │   ├───sample-conf
+│           │   │   └───sample-data
+│           │   └───sources
+│           └───yarn
+│               ├───lib
+│               ├───sources
+│               └───test
+├───hive
+│   ├───bin
+│   │   └───ext
+│   │       └───util
+│   ├───conf
+│   ├───examples
+│   │   ├───files
+│   │   └───queries
+│   ├───hcatalog
+│   │   ├───bin
+│   │   ├───etc
+│   │   │   ├───hcatalog
+│   │   │   └───webhcat
+│   │   ├───libexec
+│   │   ├───sbin
+│   │   └───share
+│   │       ├───doc
+│   │       │   └───hcatalog
+│   │       ├───hcatalog
+│   │       └───webhcat
+│   │           ├───java-client
+│   │           └───svr
+│   │               └───lib
+│   ├───lib
+│   │   ├───php
+│   │   │   ├───ext
+│   │   │   │   └───thrift_protocol
+│   │   │   │       └───tags
+│   │   │   │           └───1.0.0
+│   │   │   ├───packages
+│   │   │   │   ├───fb303
+│   │   │   │   ├───hive_metastore
+│   │   │   │   │   └───metastore
+│   │   │   │   ├───hive_service
+│   │   │   │   ├───queryplan
+│   │   │   │   └───serde
+│   │   │   │       └───org
+│   │   │   │           └───apache
+│   │   │   │               └───hadoop
+│   │   │   │                   └───hive
+│   │   │   │                       └───serde
+│   │   │   ├───protocol
+│   │   │   └───transport
+│   │   └───py
+│   │       ├───fb303
+│   │       ├───fb303_scripts
+│   │       ├───hive_metastore
+│   │       ├───hive_serde
+│   │       ├───hive_service
+│   │       ├───queryplan
+│   │       ├───TCLIService
+│   │       └───thrift
+│   │           ├───protocol
+│   │           ├───reflection
+│   │           │   └───limited
+│   │           ├───server
+│   │           └───transport
+│   └───scripts
+│       └───metastore
+│           └───upgrade
+│               ├───azuredb
+│               ├───derby
+│               ├───mssql
+│               ├───mysql
+│               ├───oracle
+│               └───postgres
+└───spark
+    ├───bin
+    ├───conf
+    ├───data
+    │   └───mllib
+    │       ├───als
+    │       ├───lr-data
+    │       └───ridge-data
+    ├───ec2
+    │   └───deploy.generic
+    │       └───root
+    │           └───spark-ec2
+    ├───examples
+    │   └───src
+    │       └───main
+    │           ├───java
+    │           │   └───org
+    │           │       └───apache
+    │           │           └───spark
+    │           │               └───examples
+    │           │                   ├───ml
+    │           │                   ├───mllib
+    │           │                   ├───sql
+    │           │                   └───streaming
+    │           ├───python
+    │           │   ├───ml
+    │           │   ├───mllib
+    │           │   └───streaming
+    │           ├───resources
+    │           └───scala
+    │               └───org
+    │                   └───apache
+    │                       └───spark
+    │                           └───examples
+    │                               ├───bagel
+    │                               ├───graphx
+    │                               ├───ml
+    │                               ├───mllib
+    │                               ├───pythonconverters
+    │                               ├───sql
+    │                               │   └───hive
+    │                               └───streaming
+    │                                   └───clickstream
+    ├───lib
+    ├───python
+    │   ├───build
+    │   │   └───py4j
+    │   │       └───tests
+    │   ├───docs
+    │   ├───lib
+    │   ├───pyspark
+    │   │   ├───ml
+    │   │   │   └───param
+    │   │   ├───mllib
+    │   │   │   └───stat
+    │   │   ├───sql
+    │   │   └───streaming
+    │   └───test_support
+    └───sbin
