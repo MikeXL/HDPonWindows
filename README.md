@@ -4,14 +4,12 @@
 here is how it works
 
 ### 0. download hdp from hortonworks, easy
-
 Prerequisites still required, such as  
 
 - Python (I've got 2.7.6 x64 to keep consistent with other computer, such as my Mac)  
 - Java (I went a bit far, got 8)  
 - Viscual C++ 2010 SP1 Redistributable x64  
 - PowerShell 3.0 if you are on windows 2008 R2; not needed if you are on Windows 10 (oh yes)  
-
 
 ### 1. unpack the msi file
 What? Yes, you hear me. As I had enough frustration to launch the msi over and over again, just doesn't work  
