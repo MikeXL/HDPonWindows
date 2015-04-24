@@ -62,7 +62,7 @@ yes.
     %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /user/hive/warehouse
 
 
-### 9. configure hive (optional: as I like to use SQL server for meta store)
+### 9. configure hive (optional: as I like to use SQL server for meta store, in my case SQL Azure)
 
 1. Download SQL server JDBC and place it to %HIVE_HOME%\lib  
 2. In SQL server, create a new database for HIVE, I have it named as HIVE owned by a user hive with password Hadoop1234  
@@ -80,11 +80,17 @@ Thought it is very complicated, and following thru the scripts hortonworks made.
   Connect via ODBC, just remember to punch in the username hive and password setup for the metastore
 
 
-### 12. start hcat (really needed?)
+### 12. Spark
+It is as simple as this to run spark on yarn interactively if you have the spark binary built with yarn support.  
+
+    pyspark --master *yarn-client*
+
+use yarn-master when submitting an spark app.  
 
 
-
-
+#### 13. hive on tez
+#### 14. hive on spark
+#### 15. hcatalog
 
 
 Last but not least thanks to  
@@ -96,3 +102,4 @@ Last but not least thanks to
 [1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows "Hadoop on Windows Wiki"
 [2]: https://cwiki.apache.org/confluence/display/Hive/HiveDerbyServerMode#HiveDerbyServerMode-ConfigureHivetoUseNetworkDerby "Configure HIVE"
 [3]: http://hortonworks.com/hadoop-tutorial/using-hive-data-analysis/ "Using Hive for Data Analysis"
+[4]: https://developer.ibm.com/hadoop/blog/2014/09/19/big-sql-3-0-file-formats-usage-performance/ "Good comparision of Hive storage format"
