@@ -26,12 +26,13 @@ What? Yes, you hear me. As I had enough frustration to launch the msi over and o
 ### 3. Set environment variables
 (path used as above sample, other than below, ensure python in the PATH and JAVA_HOME is set.)  
 
-    SET HADOOP_HOME=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
-    SET HIVE_HOME=E:\hdp-2.2.4.2\hive-0.14.0.2.2.4.2-0002  
-    SET HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002  
-    SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop  
-    SET YARN_CONF_DIR=%HADOOP_CONF_DIR%  
-    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin  
+    SET HADOOP_HOME=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002
+    SET HIVE_HOME=E:\hdp-2.2.4.2\hive-0.14.0.2.2.4.2-0002
+    SET HADOOP_PREFIX=E:\hdp-2.2.4.2\hadoop-2.6.0.2.2.4.2-0002
+    SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
+    SET YARN_CONF_DIR=%HADOOP_CONF_DIR%
+    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin
+
 
 or run env.cmd (uploaded in the hdp folder inside this repo).
 
