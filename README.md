@@ -87,9 +87,20 @@ use yarn-master when submitting an spark app.  for instance,
 %spark_home%\bin\spark-submit.cmd --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --master yarn-custer spark-internal
 
 
-#### 13. hive on tez
-#### 14. hive on spark
-#### 15. hcatalog
+### 13. hive on tez vs hive on spark
+
+
+### 14. hive file format orc vs parquet
+
+
+
+### 15. hcatalog
+I have to say wow, hcat.py works with double quotation. maybe it is the nature of windows command line. I just so used to single.
+
+  %HCAT_HOME%\bin\hcat.py -e "desc mtcars"
+
+
+
 
 
 Last but not least thanks to  
