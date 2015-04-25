@@ -7,7 +7,7 @@ The idea is quite simple *xcopy* type of deployment.
 
 - Python 2.7.6 x64 same as my Yosemite
 - Java 1.8.0_45
-- Viscual C++ 2010 SP1 Redistributable x64  
+- Viscual C++ 2010 SP1 Redistributable x64
 - Download hdp windows installer from hortonworks
 - Unpack the msi to get the individual zip files
 
@@ -26,13 +26,15 @@ The idea is quite simple *xcopy* type of deployment.
 ### 3. Set environment variables
 (path used as above sample, other than below, ensure python in the PATH and JAVA_HOME is set.)  
 
-    SET HADOOP_HOME=C:\hdp\hadoop
-    SET HIVE_HOME=C:\hdp\hive
-    Set SPARK_HOME = C:\hdp\spark
+    SET HADOOP_HOME=c:\hdp\hadoop
+    SET HIVE_HOME=c:\hdp\hive
+    SET SPARK_HOME=c:\hdp\spark
+    SET HCAT_HOME=c:\hdp\hive\hcatalog
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%
-    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin
-
+    SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin
+    REM In below I have prefix the full path so you would know where the file is, 
+    REM but no need when typing as above PATH setting
 
 ### 4. edit the xml configuration files
 I have it uploaded
@@ -74,12 +76,12 @@ yes.
 ### 11. Spark
 It is as simple as placing [*yarn-client* or *yarn-cluster*][5] for the master parameter. And ensure the spark binary built with yarn support.  For instance, start pyspark.
 
-    pyspark --master yarn-client
+    %SPARK_HOME%\bin\pyspark --master yarn-client
 
 
 use yarn-master when submitting an spark app, for instance, Pi
 
-    spark-submit --verbose ^
+    %SPARK_HOME%\bin\spark-submit --verbose ^
       --class org.apache.spark.examples.SparkPi ^
       --master yarn-cluster ^
       --num-executors 3 ^
@@ -91,7 +93,7 @@ use yarn-master when submitting an spark app, for instance, Pi
 
 To start the thrift server on yarn, ensure the *hive-site.xml*
 
-    %spark_home%\bin\spark-submit  ^
+    %SPARK_HOME%\bin\spark-submit  ^
           --class  ^
               org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 ^
           --master yarn-client? spark-internal
