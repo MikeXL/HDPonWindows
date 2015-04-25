@@ -8,13 +8,12 @@ The idea is quite simple *xcopy* type of deployment.
 - Python 2.7.6 x64 same as my Yosemite
 - Java 1.8.0_45
 - Viscual C++ 2010 SP1 Redistributable x64  
-- PowerShell 3.0 if you are on windows 2008 R2; not needed if you are on Windows 10 (yes, it comes with PS 5.0, one more reason for WinX)  
 - Download hdp windows installer from hortonworks
 - Unpack the msi to get the individual zip files
 
 
-      msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=D:\
-
+    msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=D:\
+    
 
 
 ### 2. Find the HadoopInstallFiles and unzip hadoop, hive, spark then put then in
