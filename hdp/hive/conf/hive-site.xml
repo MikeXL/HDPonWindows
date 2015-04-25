@@ -1,24 +1,28 @@
 <configuration>
-<property>
-  <name>javax.jdo.option.ConnectionURL</name>
-  <value>jdbc:sqlserver://pony:1433;databaseName=hive;user=hive;password=Hadoop1234</value>
-  <description>JDBC connect string for a JDBC metastore</description>
-</property>
-<property>
-  <name>javax.jdo.option.ConnectionDriverName</name>
-  <value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
-  <description>Driver class name for a JDBC metastore</description>
-</property>
-<property>
-  <name>javax.jdo.option.ConnectionUserName</name>
-  <value>hive</value>
-</property>
-<property>
-  <name>javax.jdo.option.ConnectionPassword</name>
-  <value>Hadoop1234</value>
-</property>
+  
+  <property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:sqlserver://pony:1433;databaseName=hive;user=hive;password=Hadoop1234</value>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>hive</value>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>Hadoop1234</value>
+  </property>
+
   <property>
     <name>hive.server2.authentication</name>
     <value>NONE</value>
   </property>
+
 </configuration>

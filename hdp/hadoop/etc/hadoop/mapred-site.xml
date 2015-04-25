@@ -1,5 +1,5 @@
 <configuration>
-
+  
    <property>
      <name>mapreduce.job.user.name</name>
      <value>%USERNAME%</value>
