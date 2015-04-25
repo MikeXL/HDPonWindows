@@ -72,10 +72,11 @@ yes.
     %HIVE_HOME%\bin\hive --service hiveserver2  
 
 
-### 12. Spark
+### 11. Spark
 It is as simple as placing [*yarn-client* or *yarn-cluster*][5] for the master parameter. And ensure the spark binary built with yarn support.  For instance, start pyspark.
 
     pyspark --master yarn-client
+
 
 use yarn-master when submitting an spark app, for instance, Pi
 
@@ -87,19 +88,19 @@ use yarn-master when submitting an spark app, for instance, Pi
       --executor-memory 512m ^
       --executor-cores 1 ^
       %spark_home%/lib/spark-examples*.jar 10  
-    
+
 
 To start the thrift server on yarn, ensure the *hive-site.xml*
 
     %spark_home%\bin\spark-submit  ^
           --class  ^
               org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 ^
-          --master yarn-cluster? spark-internal
+          --master yarn-client? spark-internal
           --hiveconf hive.server2.thrift.port=1170
 
 
 
-### 13. hcatalog
+### 12. hcatalog
 I have to say wow, hcat.py works with double quotation. maybe it is the nature of windows command line. I just so used to single.
 
     %HCAT_HOME%\bin\hcat.py -e "desc mtcars"
