@@ -86,8 +86,10 @@ It is as simple as this to run spark on yarn interactively if you have the spark
 
 use yarn-master when submitting an spark app.  for instance,  
 
-  %spark_home%\bin\spark-submit.cmd --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --master yarn-custer spark-internal
+  %spark_home%\bin\spark-submit.cmd --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 --master yarn-cluster spark-internal
 
+
+--hiveconf hive.server2.thrift.port=20000 
 
 ### 13. hive on tez vs hive on spark
 
