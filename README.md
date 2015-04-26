@@ -12,8 +12,8 @@ The idea is quite simple *xcopy* type of deployment.
 - Unpack the msi to get the individual zip files
 
 
-    msiexec /a hdp-x.x.x.x.msi /qn TARGETDIR=D:\
-    
+    msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:\
+
 
 
 ### 2. Find the HadoopInstallFiles and unzip hadoop, hive, spark then put then in
