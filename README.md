@@ -1,14 +1,14 @@
 # Install HDP on Windows
 
-Here is how it works on either Windows 2008 R2 or Windows 10 (server technical preview). I'm mainly on latter on azure VM.  
+Here is how it works on Windows 2012 R2 (technical preview).  Also tested on 2008 R2.
 The idea is quite simple *xcopy* type of deployment.
 
 ### 1. Prerequisites
 
-- Python 2.7.6 x64 same as my Yosemite
-- Java 1.8.0_45
-- Download hdp windows installer from hortonworks
-- Unpack the msi to get the individual zip files
+* Python 2.7.6 x64 same as my Yosemite
+* Java 1.8.0_45
+* Download hdp windows installer from Hortonworks
+* Unpack the msi to get the individual zip files
 
 
     msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:\
