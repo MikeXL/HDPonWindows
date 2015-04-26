@@ -11,7 +11,7 @@ The idea is quite simple *xcopy* type of deployment.
 * Unpack the msi to get the individual zip files
 
     msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:\
-    
+
 
 
 ### 2. Find the D:\HadoopInstallFiles and unzip hadoop, hive, spark then put then in
@@ -96,7 +96,7 @@ It is as simple as placing [*yarn-client* or *yarn-cluster*][5] for the master p
 ### 12. hcatalog
 I have to say wow, hcat.py works with double quotation. maybe it is the nature of windows command line. I just so used to single.
 
-    %HCAT_HOME%\bin\hcat.py -e "desc mtcars"
+    %HCAT_HOME%\bin\hcat.py -e "show tables"
 
 
 
