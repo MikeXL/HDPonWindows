@@ -34,7 +34,7 @@
     REM Copy %HIVE_HOME%\conf\hive-site.xml to %SPARK_HOME%\conf\
     REM
 
-    SET CLASSPATH=%HIVE_HOME%\lib\sqljdbc41.jar
+    SET SPARK_CLASSPATH=%HIVE_HOME%\lib\sqljdbc41.jar
 
     %SPARK_HOME%\bin\spark-submit --verbose ^
         --master yarn-client ^
