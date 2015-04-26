@@ -6,13 +6,9 @@ The idea is quite simple *xcopy* type of deployment.
 ### 1. Prerequisites
 
 * Python 2.7.6 x64 same as my Yosemite
-* Java 1.8.0_45
+* Java 1.8.0_45 x64
 * Download hdp windows installer from Hortonworks
-* Unpack the msi to get the individual zip files
-
-    msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:\
-
-
+* Unpack the msi using _msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:_
 
 ### 2. Find the D:\HadoopInstallFiles and unzip hadoop, hive, spark then put then in
 
