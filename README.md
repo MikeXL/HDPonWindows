@@ -33,8 +33,22 @@ The idea is quite simple *xcopy* type of deployment.
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%
     SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin
-    REM In below I have prefix the full path so you would know where the file is, 
+    REM In below I have prefix the full path so you would know where the file is,
     REM but no need when typing as above PATH setting
+
+    #
+    # if you like to only do this once, run below code in PowerShell to set user environment
+    #
+    [Environment]::SetEnvironmentVariable("JAVA_HOME",        "C:\Java",                 "User")
+    [Environment]::SetEnvironmentVariable("HADOOP_HOME",      "c:\hdp\hadoop",           "User")
+    [Environment]::SetEnvironmentVariable("HIVE_HOME",        "c:\hdp\hive",             "User")
+    [Environment]::SetEnvironmentVariable("SPARK_HOME",      "c:\hdp\spark",             "User")
+    [Environment]::SetEnvironmentVariable("HCAT_HOME",       "c:\hdp\hive\hcatalog",     "User")
+    [Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR", "%HADOOP_HOME%\etc\hadoop", "User")
+    [Environment]::SetEnvironmentVariable("YARN_CONF_DIR",   "%HADOOP_CONF_DIR%",        "User")
+    [Environment]::SetEnvironmentVariable("PATH",            "%HADOOP_HOME%\bin;%HADOOP_HOME\sbin\%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin;C:\Python;%JAVA_HOME%\bin", "User")
+
+
 
 ### 4. edit the xml configuration files
 I have it uploaded
