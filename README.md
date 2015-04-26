@@ -7,7 +7,6 @@ The idea is quite simple *xcopy* type of deployment.
 
 - Python 2.7.6 x64 same as my Yosemite
 - Java 1.8.0_45
-- Viscual C++ 2010 SP1 Redistributable x64
 - Download hdp windows installer from hortonworks
 - Unpack the msi to get the individual zip files
 
@@ -16,7 +15,7 @@ The idea is quite simple *xcopy* type of deployment.
 
 
 
-### 2. Find the HadoopInstallFiles and unzip hadoop, hive, spark then put then in
+### 2. Find the D:\HadoopInstallFiles and unzip hadoop, hive, spark then put then in
 
     c:\hdp\hadoop
     c:\hdp\hive
@@ -37,16 +36,16 @@ The idea is quite simple *xcopy* type of deployment.
     REM but no need when typing as above PATH setting
 
     #
-    # if you like to only do this once, run below code in PowerShell to set user environment
+    # or if you may, run below PowerShell snippet to set user environment once for all
     #
-    [Environment]::SetEnvironmentVariable("JAVA_HOME",        "C:\Java",                 "User")
-    [Environment]::SetEnvironmentVariable("HADOOP_HOME",      "c:\hdp\hadoop",           "User")
-    [Environment]::SetEnvironmentVariable("HIVE_HOME",        "c:\hdp\hive",             "User")
-    [Environment]::SetEnvironmentVariable("SPARK_HOME",      "c:\hdp\spark",             "User")
-    [Environment]::SetEnvironmentVariable("HCAT_HOME",       "c:\hdp\hive\hcatalog",     "User")
-    [Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR", "%HADOOP_HOME%\etc\hadoop", "User")
-    [Environment]::SetEnvironmentVariable("YARN_CONF_DIR",   "%HADOOP_CONF_DIR%",        "User")
-    [Environment]::SetEnvironmentVariable("PATH",            "%HADOOP_HOME%\bin;%HADOOP_HOME\sbin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin;C:\Python;%JAVA_HOME%\bin", "User")
+    [Environment]::SetEnvironmentVariable("JAVA_HOME",        "C:\Java",                  "User")
+    [Environment]::SetEnvironmentVariable("HADOOP_HOME",      "c:\hdp\hadoop",            "User")
+    [Environment]::SetEnvironmentVariable("HIVE_HOME",        "c:\hdp\hive",              "User")
+    [Environment]::SetEnvironmentVariable("SPARK_HOME",       "c:\hdp\spark",             "User")
+    [Environment]::SetEnvironmentVariable("HCAT_HOME",        "c:\hdp\hive\hcatalog",     "User")
+    [Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR",  "c:\hdp\hadoop\etc\hadoop", "User")
+    [Environment]::SetEnvironmentVariable("YARN_CONF_DIR",    "c:\hdp\hadoop\etc\hadoop", "User")
+    [Environment]::SetEnvironmentVariable("PATH",             "c:\hdp\hadoop\bin;c:\hdp\hadoop\sbin;c:\hdp\hive\bin;c:\hdp\spark\bin;C:\Python;c:\Java\bin", "User")
 
 
 
@@ -77,9 +76,9 @@ yes.
 
 ### 9. configure hive metastore (optional: as I am running in azure VM so why not use like to use SQL Azure)
 
-1. Download SQL server JDBC and place it to %HIVE_HOME%\lib  
-2. In SQL azure, create a new database for HIVE, and record the host and login information that needed in next step  
-3. Checkout the hive-site.xml configuration file in the hdp/hive/conf folder in this repo for an example.  
+1. Download SQL server JDBC (4.1 as of 25th April, 2015 with name sqljdbc41.jar) and place it to %HIVE_HOME%\lib  
+2. In SQL azure, create a new database named HIVE, and record the host and login credential that needed in next step  
+3. Checkout the hdp/hive/conf/hive-site.xml for configuration.  
 
 
 ### 10. start hive services
@@ -91,28 +90,6 @@ yes.
 It is as simple as placing [*yarn-client* or *yarn-cluster*][5] for the master parameter. And ensure the spark binary built with yarn support.  For instance, start pyspark.
 
     %SPARK_HOME%\bin\pyspark --master yarn-client
-
-
-use yarn-master when submitting an spark app, for instance, Pi
-
-    %SPARK_HOME%\bin\spark-submit --verbose ^
-      --class org.apache.spark.examples.SparkPi ^
-      --master yarn-cluster ^
-      --num-executors 3 ^
-      --driver-memory 512m ^
-      --executor-memory 512m ^
-      --executor-cores 1 ^
-      %spark_home%/lib/spark-examples*.jar 10  
-
-
-To start the thrift server on yarn, ensure the *hive-site.xml*
-
-    %SPARK_HOME%\bin\spark-submit  ^
-          --class  ^
-              org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 ^
-          --master yarn-client? spark-internal
-          --hiveconf hive.server2.thrift.port=1170
-
 
 
 ### 12. hcatalog
