@@ -46,7 +46,7 @@ The idea is quite simple *xcopy* type of deployment.
     [Environment]::SetEnvironmentVariable("HCAT_HOME",       "c:\hdp\hive\hcatalog",     "User")
     [Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR", "%HADOOP_HOME%\etc\hadoop", "User")
     [Environment]::SetEnvironmentVariable("YARN_CONF_DIR",   "%HADOOP_CONF_DIR%",        "User")
-    [Environment]::SetEnvironmentVariable("PATH",            "%HADOOP_HOME%\bin;%HADOOP_HOME\sbin\%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin;C:\Python;%JAVA_HOME%\bin", "User")
+    [Environment]::SetEnvironmentVariable("PATH",            "%HADOOP_HOME%\bin;%HADOOP_HOME\sbin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin;C:\Python;%JAVA_HOME%\bin", "User")
 
 
 
