@@ -10,9 +10,8 @@ The idea is quite simple *xcopy* type of deployment.
 * Download hdp windows installer from Hortonworks
 * Unpack the msi to get the individual zip files
 
-
     msiexec /a hdp-2.2.4.2.winpkg.msi /qn TARGETDIR=D:\
-
+    
 
 
 ### 2. Find the D:\HadoopInstallFiles and unzip hadoop, hive, spark then put then in
@@ -23,7 +22,6 @@ The idea is quite simple *xcopy* type of deployment.
 
 
 ### 3. Set environment variables
-(path used as above sample, other than below, ensure python in the PATH and JAVA_HOME is set.)  
 
     SET HADOOP_HOME=c:\hdp\hadoop
     SET HIVE_HOME=c:\hdp\hive
@@ -32,8 +30,11 @@ The idea is quite simple *xcopy* type of deployment.
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%
     SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin
+    REM
     REM In below I have prefix the full path so you would know where the file is,
     REM but no need when typing as above PATH setting
+    REM ensure Python in PATH and JAVA_HOME is set too
+
 
     #
     # or if you may, run below PowerShell snippet to set user environment once for all
