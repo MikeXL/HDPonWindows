@@ -1,5 +1,7 @@
 # Hive
 
+
+
 ### metastore (on SQL Azure)
 
 
@@ -9,6 +11,14 @@
 
 ### storage format
 [Here][4] is the good comparison and benchmark done by IBM.
+
+
+### execution engine
+
+* mr
+* tez
+* spark
+
 
 
 
