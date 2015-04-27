@@ -1,9 +1,9 @@
 
 
-  * libref;
+  \* libref;  
   libname hdp hadoop server=unicorn;
 
-  * passthru;
+  \* passthru;  
   proc sql;
       connect to hadoop (server=unicorn);
   
