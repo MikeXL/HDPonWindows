@@ -40,4 +40,38 @@
         --master yarn-client ^
         --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 ^
         spark-internal ^
-        --hiveconf hive.server2.thrift.port=20000
+        --hiveconf hive.server2.thrift.port=20000 ^
+
+
+kinda need this for my linux box for standalone mode as default is user/hive/warehouse
+
+    $SPARK_HOME/bin/spark-submit \
+      --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 \
+      spark-internal \
+      --hiveconf hive.server2.thrift.port=10000 \
+      --hiveconf hive.metastore.warehouse.dir=/home/t844523/hive/warehouse &
+
+### Execute Spark SQL via RODBC - create tables from json, parquet and jdbc (SQL Server)
+
+      sqlQuery(ch, 'CREATE TABLE users
+                    USING org.apache.spark.sql.parquet
+                    OPTIONS (
+                        path "/home/mike/spark/examples/src/main/resources/users.parquet"
+                    )'
+               );
+
+
+      sqlQuery(ch, 'CREATE TABLE parquetTable
+                    USING org.apache.spark.sql.parquet
+                    OPTIONS (
+                        path "/home/mike/spark/examples/src/main/resources/users.parquet"
+                    )'
+               );
+
+      sqlQuery(ch, 'CREATE TABLE jdbcTable
+                    USING org.apache.spark.sql.jdbc
+                    OPTIONS (
+                        url "jdbc:sqlserver://pony:1433;databaseName=HIVE;user=hive;password=hive",
+                        dbtable "TBLS"
+                    )'
+              );

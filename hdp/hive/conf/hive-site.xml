@@ -1,8 +1,8 @@
 <configuration>
-  
+
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:sqlserver://pony:1433;databaseName=hive;user=hive;password=Hadoop1234</value>
+    <value>jdbc:sqlserver://pony:1433;databaseName=hive;user=hive;password=hive</value>
   </property>
 
   <property>
@@ -17,7 +17,7 @@
 
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>Hadoop1234</value>
+    <value>hive</value>
   </property>
 
   <property>
