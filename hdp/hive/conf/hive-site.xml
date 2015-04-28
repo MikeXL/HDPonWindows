@@ -2,7 +2,7 @@
 
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:sqlserver://pony:1433;databaseName=hive;user=hive;password=hive</value>
+    <value>jdbc:sqlserver://pony;databaseName=hive</value>
   </property>
 
   <property>
