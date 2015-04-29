@@ -25,4 +25,14 @@
     <value>NONE</value>
   </property>
 
+  <property>
+    <name>hive.vectorized.execution.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>hive.vectorized.execution.reduce.enabled</name>
+    <value>true</value>
+  </property>
+  
 </configuration>
