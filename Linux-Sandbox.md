@@ -6,7 +6,7 @@ I know, I know, this is about HDP on windows. But why not give linux a bit love 
 It is actually very simple to get Linux sandbox up and running
 
 1. log into azure portal
-2. create a virtual machine 
+2. create a virtual machine
 3. pick up HDP2.2 sandbox
 4. add a certificate for SSH
 5. enjoy (well, change the hive.execution.engine to tez then enjoy)
@@ -26,4 +26,4 @@ Here is how you would forward the ports
     ssh -L 9000:sandbox:80 -L 8000:sandbox:8000 -L 8088:sandbox:8088 mike@enterprise.cloudapp.net
 
 
-LLAP
+LLAP 🖖
