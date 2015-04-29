@@ -49,7 +49,7 @@ kinda need this for my linux box for standalone mode as default is user/hive/war
       --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2 \
       spark-internal \
       --hiveconf hive.server2.thrift.port=10000 \
-      --hiveconf hive.metastore.warehouse.dir=/home/t844523/hive/warehouse &
+      --hiveconf hive.metastore.warehouse.dir=/home/mike/hive/warehouse &
 
 ### Execute Spark SQL via RODBC - create tables from json, parquet and jdbc (SQL Server)
 
@@ -71,7 +71,7 @@ kinda need this for my linux box for standalone mode as default is user/hive/war
       sqlQuery(ch, 'CREATE TABLE jdbcTable
                     USING org.apache.spark.sql.jdbc
                     OPTIONS (
-                        url "jdbc:sqlserver://pony:1433;databaseName=HIVE;user=hive;password=hive",
+                        url "jdbc:sqlserver://pony;databaseName=HIVE;user=hive;password=hive",
                         dbtable "TBLS"
                     )'
               );
