@@ -3,6 +3,9 @@
 Here is how it works on Windows 2012 R2 (technical preview).  Also tested on 2008 R2.
 The idea is quite simple *xcopy* type of deployment.
 
+This setup is for a single node *sandbox*, to setup a multi-node cluster, please [click here][7] after below setups.
+
+
 ### 1. Prerequisites
 
 * Python 2.7.6 x64 same as my Yosemite
@@ -103,3 +106,4 @@ I have to say wow, hcat.py works with double quotation. maybe it is the nature o
 [4]: https://developer.ibm.com/hadoop/blog/2014/09/19/big-sql-3-0-file-formats-usage-performance/ "Good comparision of Hive storage format"  
 [5]: http://blog.cloudera.com/blog/2014/05/apache-spark-resource-management-and-yarn-app-models/ "Spark yarn mode client vs master explained"  
 [6]: http://hortonworks.com/hadoop-tutorial/using-apache-spark-hdp/ "Using Apache Spark on HDP"
+[7]: https://github.com/MikeXL/HDPonWindows/blob/master/multi-node-cluster.md "multi node hadoop cluster"
