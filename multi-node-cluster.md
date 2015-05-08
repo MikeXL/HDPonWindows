@@ -22,7 +22,7 @@
 
 
 ## 2. data node or compute node
-  Please refer to the [datanode][1] folder for the configuration files.
+  Please refer to the [datanode][1] folder for the configuration files.  
   (replace %HEADNODE% with ip address of your headnode or set environment variable, latter is not tested)
 
 
@@ -32,8 +32,12 @@
     REM start yarn node manager
     yarn nodemanager
 
+## 3. change the replication factor to 3 if in production
 
-## 3. useful commands
+    dfs.replication = 3 in hdfs-site.xml
+
+
+## 4. useful commands
 
     REM to list all nodes
     hdfs dfsadmin -report
