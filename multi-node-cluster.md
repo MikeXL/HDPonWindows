@@ -1,6 +1,6 @@
 # HDP Cluster
 
-## name node or head node
+## 1. name node or head node
 
  *same setup as the single node sandbox with below*
  add the datanode or compute node hostname or ip address to files *slaves* and *yarn.include*
@@ -21,14 +21,10 @@
       computer
 
 
-## data node or compute node
-  add reference to name node in files, please refer to datanode folder.
+## 2. data node or compute node
+  Please refer to the [datanode][1] folder for the configuration files.
   (replace %HEADNODE% with ip address of your headnode or set environment variable, latter is not tested)
 
-  - core-site.xml
-  - hdfs-site.xml
-  - mapred-site.xml
-  - yarn-site.xml
 
     REM start data node
     hdfs datanode
@@ -37,12 +33,14 @@
     yarn nodemanager
 
 
-
-
-## useful commands
+## 3. useful commands
 
     REM to list all nodes
     hdfs dfsadmin -report
 
     REM to refresh nodes
     hdfs dfsadmin -refreshNodes
+
+
+
+[1]: https://github.com/MikeXL/HDPonWindows/tree/master/datanode/hdp/hadoop/etc "data node configuration files"
