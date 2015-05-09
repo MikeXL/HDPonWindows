@@ -58,8 +58,18 @@ I have it uploaded
 ### 6. start hadoop dfs
     %HADOOP_HOME%\sbin\start-dfs.cmd
 
+    _REM you may receive warning that above method will be deprecated, here is the new way_
+
+    hdfs namenode
+    hdfs datanode
+
 ### 7. start yarn
     %HADOOP_HOME%\sbin\start-yarn.cmd
+
+    _REM you may receive warning that above method will be deprecated, here is the new way_
+
+    yarn resourcemanager
+    yarn nodemanager
 
 then fire up your browser, type in the url, in my case http://unicorn:8088  
 yes.

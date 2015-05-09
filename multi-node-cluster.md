@@ -4,21 +4,21 @@
 
  *same setup as the single node sandbox with below*
  add the datanode or compute node hostname or ip address to files *slaves* and *yarn.include*
- for instance, I have two data nodes named _data_ and _computer_
+ for instance, I have two data nodes named _pony_ and _foal_
 
 ### %hadoop_conf_dir%\slaves
 
     > cat %HADOOP_CONF_DIR%\slaves
       localhost
-      data
-      computer
+      pony
+      foal
 
 
 ### %hadoop_conf_dir%\yarn.include
 
     > cat %HADOOP_CONF_DIR%\yarn.include
-      data
-      computer
+      pony
+      foal
 
 
 ## 2. data node or compute node
