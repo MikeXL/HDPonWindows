@@ -7,7 +7,7 @@
 
   <property>
     <name>dfs.http.address</name>
-    <value>%HEADNODE%</value>
+    <value>unicorn</value>
   </property>
 
 </configuration>

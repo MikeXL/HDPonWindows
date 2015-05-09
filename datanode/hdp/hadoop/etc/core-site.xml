@@ -1,6 +1,6 @@
 <configuration>
   <property>
     <name>fs.default.name</name>
-    <value>hdfs://%HEADNODE%:19000</value>
+    <value>hdfs://unicorn:19000</value>
   </property>
 </configuration>

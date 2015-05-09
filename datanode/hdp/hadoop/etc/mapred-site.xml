@@ -1,5 +1,5 @@
 <configuration>
- 
+
    <property>
      <name>mapreduce.job.user.name</name>
      <value>%USERNAME%</value>
@@ -17,7 +17,7 @@
 
   <property>
     <name>mapreduce.jobtracker.address</name>
-    <value>%HEADNODE%</value>
+    <value>unicorn</value>
   </property>
 
 </configuration>
