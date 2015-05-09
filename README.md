@@ -3,7 +3,7 @@
 Here is how it works on Windows 2012 R2 (technical preview).  Also tested on 2008 R2.
 The idea is quite simple *xcopy* type of deployment.
 
-This setup is for a single node *sandbox*, to setup a multi-node cluster, please [click here][7] after below setups.
+This setup is for a single node *sandbox*, to setup a [multi-node cluster][7], please [click here][7] after below setups.
 
 
 ### 1. Prerequisites
