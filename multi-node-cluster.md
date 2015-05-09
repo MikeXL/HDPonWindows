@@ -1,5 +1,23 @@
 # HDP Cluster
 
+
+    *unicorn* <- head node aka name node
+    +=========================+
+    |   yarn node manager     |
+    |   yarn resource manager |
+    |   hdfs name node        |
+    |   hdfs data node        |
+    +=========================+
+
+
+    *pony* <- data node aka workder node       *foal* <- data node aka workder node
+
+    +=========================+               +=========================+
+    |   yarn node manager     |               |   yarn node manager     |
+    |   hdfs data node        |               |   hdfs data node        |
+    +=========================+               +=========================+
+
+
 ## 1. name node or head node
 
  *same setup as the single node sandbox with below*
