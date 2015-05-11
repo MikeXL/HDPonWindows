@@ -28,10 +28,11 @@
 
 ## modify file /etc/init.d/impala-server line 35 to
 
+
   if [ -f /etc/default/hadoop] ; then
     . /etc/default/hadoop
   fi
-
+  
 
 ## start services
 
