@@ -23,15 +23,17 @@
 
 ## config
 
-  sudo cp /etc/hadoop/conf/core-site.xml /etc/impala/conf
-  sudo cp /etc/hadoop/conf/hdfs-site.xml /etc/impala/conf
-
+        
+        sudo cp /etc/hadoop/conf/core-site.xml /etc/impala/conf
+        sudo cp /etc/hadoop/conf/hdfs-site.xml /etc/impala/conf
+        
+        
 ## modify file /etc/init.d/impala-server line 35 to
 
-
-  if [ -f /etc/default/hadoop] ; then
-    . /etc/default/hadoop
-  fi
+        
+        if [ -f /etc/default/hadoop] ; then
+        . /etc/default/hadoop
+        fi
   
 
 ## start services
