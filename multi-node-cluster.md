@@ -41,8 +41,11 @@
 
 ## 2. data node or compute node
   Please refer to the [datanode][1] folder for the configuration files.  
-  (replace %HEADNODE% with ip address of your headnode or set environment variable, latter is not tested)
+  (replace %NAMENODE% with ip address of your namenode (or headnode or master) or set environment variable, latter is not tested)
 
+
+    REM set namenode server
+    SET NAMENODE=unicorn
 
     REM start data node
     hdfs datanode
@@ -50,7 +53,7 @@
     REM start yarn node manager
     yarn nodemanager
 
-## 3. change the replication factor to 3 if in production
+## 3. change the replication factor to 3 if desired
 
     dfs.replication = 3 in hdfs-site.xml
 
