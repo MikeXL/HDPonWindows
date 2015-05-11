@@ -1,4 +1,4 @@
-
+# spark
 
 
 ### pyspark HiveContext code
@@ -12,8 +12,6 @@
     sqlContext.sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING)")
     sqlContext.sql("LOAD DATA LOCAL INPATH 'c:/hdp/spark/examples/src/resources/kv1.txt' INTO TABLE src")
     results = sqlContext.sql("FROM src SELECT key, value").collect()
-
-
 
 
 ### submit pi example to yarn cluster
