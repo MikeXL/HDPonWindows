@@ -11,12 +11,13 @@
 
 ## Run
 
-    bin\sqlline -u jdbc:drill:zk=local
+    bin\sqlline
+    sqlline> !connect jdbc:drill:zk=local
 
 
 ## Launch web user interface 
-  port 8047
-  for instance http://unicorn:8047
+  port 8047  
+  for instance [http://unicorn:8047][1]
 
 
 
