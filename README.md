@@ -28,7 +28,6 @@ This setup is for a single node *sandbox*, to setup a [multi-node cluster][7], p
     SET HCAT_HOME=c:\hdp\hive\hcatalog
     SET HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
     SET YARN_CONF_DIR=%HADOOP_CONF_DIR%
-    SET NAMENODE=0.0.0.0
     SET PATH=%PATH%;%HADOOP_HOME%\bin;%HIVE_HOME%\bin;%SPARK_HOME%\bin;%HCAT_HOME\bin
     REM
     REM In below I have prefix the full path so you would know where the file is,
@@ -46,7 +45,6 @@ This setup is for a single node *sandbox*, to setup a [multi-node cluster][7], p
     [Environment]::SetEnvironmentVariable("HCAT_HOME",        "c:\hdp\hive\hcatalog",     "User")
     [Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR",  "c:\hdp\hadoop\etc\hadoop", "User")
     [Environment]::SetEnvironmentVariable("YARN_CONF_DIR",    "c:\hdp\hadoop\etc\hadoop", "User")
-    [Environment]::SetEnvironmentVariable("NAMENODE",         "0.0.0.0", "User")
     [Environment]::SetEnvironmentVariable("PATH",             "c:\hdp\hadoop\bin;c:\hdp\hadoop\sbin;c:\hdp\hive\bin;c:\hdp\spark\bin;C:\Python;c:\Java\bin", "User")
 
 

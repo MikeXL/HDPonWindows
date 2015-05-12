@@ -10,7 +10,7 @@
     +=========================+
 
 
-    *pony* <- data node aka workder node       *foal* <- data node aka workder node
+    *pony* <- data node aka workder node       *spike* <- data node aka workder node
 
     +=========================+               +=========================+
     |   yarn node manager     |               |   yarn node manager     |
@@ -22,42 +22,27 @@
 
  *same setup as the single node sandbox with below*
  add the datanode or compute node hostname or ip address to files *slaves* and *yarn.include*
- for instance, I have two data nodes named _pony_ and _foal_
+ for instance, I have two data nodes named _pony_ and _spike_
 
 ### %hadoop_conf_dir%\slaves
 
     > cat %HADOOP_CONF_DIR%\slaves
       localhost
       pony
-      foal
+      spike
 
 
 ### %hadoop_conf_dir%\yarn.include
 
     > cat %HADOOP_CONF_DIR%\yarn.include
       pony
-      foal
+      spike
 
-### set name node environment variable
-
-    
-    SET NAMENODE=unicorn
-    
-    PowerShell:
-    [Environment]::SetEnvironmentVariable("NAMENODE",         "unicorn", "User")
-    
 
 ## 2. data node or compute node
   Please refer to the [datanode][1] folder for the configuration files.  
   (replace %NAMENODE% with ip address of your namenode (or headnode or master) or set environment variable, latter is not tested)
 
-
-    REM set namenode server
-    SET NAMENODE=unicorn
-    
-    REM Or in PowerShell:
-    [Environment]::SetEnvironmentVariable("NAMENODE",         "unicorn", "User")
-    
 
     REM start data node
     hdfs datanode

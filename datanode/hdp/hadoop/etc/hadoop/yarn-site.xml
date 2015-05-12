@@ -2,27 +2,27 @@
 
   <property>
     <name>yarn.server.resourcemanager.address</name>
-    <value>%NAMENODE%:8020</value>
+    <value>unicorn:8020</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
-    <value>%NAMENODE%:8030</value>
+    <value>unicorn:8030</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>%NAMENODE%:8031</value>
+    <value>unicorn:8031</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.admin.address</name>
-    <value>%NAMENODE%:8033</value>
+    <value>unicorn:8033</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.webapp.address</name>
-    <value>%NAMENODE%:8088</value>
+    <value>unicorn:8088</value>
   </property>
   <property>
     <name>yarn.server.resourcemanager.application.expiry.interval</name>
@@ -56,12 +56,12 @@
 
   <property>
     <name>yarn.server.mapreduce-appmanager.attempt-listener.bindAddress</name>
-    <value>%NAMENODE%</value>
+    <value>unicorn</value>
   </property>
 
   <property>
     <name>yarn.server.mapreduce-appmanager.client-service.bindAddress</name>
-    <value>%NAMENODE%</value>
+    <value>unicorn</value>
   </property>
 
   <property>
