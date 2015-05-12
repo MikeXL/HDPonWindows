@@ -51,7 +51,8 @@
     yarn nodemanager
 
 ## 3. change the replication factor to 3 if desired
-
+ (make this change on *all* nodes)
+ 
     dfs.replication = 3 in hdfs-site.xml
 
 
