@@ -14,8 +14,12 @@
     bin\sqlline -u jdbc:drill:zk=local
 
 
+## Launch web user interface 
+  port 8047
+  for instance http://unicorn:8047
 
 
 
 
 [1]: http://drill.apache.org "Apache Drill"
+[2]: http://unicorn:8047 "Drill Web UI"
