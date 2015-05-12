@@ -59,9 +59,12 @@
 
     REM to list all nodes
     hdfs dfsadmin -report
+    hdfs dfsadmin -printTopology
 
     REM to refresh nodes
     hdfs dfsadmin -refreshNodes
+
+
 
 
 
