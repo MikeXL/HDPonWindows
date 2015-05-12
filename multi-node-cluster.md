@@ -38,6 +38,14 @@
       pony
       foal
 
+### set name node environment variable
+
+    
+    SET NAMENODE=unicorn
+    
+    PowerShell:
+    [Environment]::SetEnvironmentVariable("NAMENODE",         "unicorn", "User")
+    
 
 ## 2. data node or compute node
   Please refer to the [datanode][1] folder for the configuration files.  
@@ -46,6 +54,10 @@
 
     REM set namenode server
     SET NAMENODE=unicorn
+    
+    REM Or in PowerShell:
+    [Environment]::SetEnvironmentVariable("NAMENODE",         "unicorn", "User")
+    
 
     REM start data node
     hdfs datanode
