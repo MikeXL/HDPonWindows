@@ -5,6 +5,11 @@
   </property>
 
   <property>
+    <name>hadoop.http.staticuser.user</name>
+    <value>spock</value>
+  </property>
+  
+  <property>
     <name>yarn.server.resourcemanager.application.expiry.interval</name>
     <value>60000</value>
   </property>
