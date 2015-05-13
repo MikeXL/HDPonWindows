@@ -17,7 +17,7 @@
 
   <property>
     <name>mapreduce.jobtracker.address</name>
-    <value>local</value>
+    <value>unicorn</value>
   </property>
 
 </configuration>

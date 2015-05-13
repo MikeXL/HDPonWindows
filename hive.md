@@ -20,6 +20,13 @@
 * spark
 
 
+### local mode
+
+    SET HIVE_OPTS='-hiveconf mapred.job.tracker=local \
+                   -hiveconf fs.default.name=file:///tmp \
+                   -hiveconf hive.metastore.warehouse.dir=file:///tmp/warehouse \
+                   -hiveconf javax.jdo.option.ConnectionURL=jdbc:derby:;databaseName=/tmp/metastore_db;create=true'
+   %HIVE_HOME%\bin\hive
 
 
 
