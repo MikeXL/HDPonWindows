@@ -4,6 +4,10 @@
     <name>yarn.server.resourcemanager.address</name>
     <value>unicorn:8020</value>
   </property>
+  <property> 
+    <name>hadoop.http.staticuser.user</name> 
+    <value>spock</value> 
+  </property> 
 
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
