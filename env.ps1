@@ -1,0 +1,8 @@
+[Environment]::SetEnvironmentVariable("JAVA_HOME",        "C:\Java",                  "User")
+[Environment]::SetEnvironmentVariable("HADOOP_HOME",      "c:\hdp\hadoop",            "User")
+[Environment]::SetEnvironmentVariable("HIVE_HOME",        "c:\hdp\hive",              "User")
+[Environment]::SetEnvironmentVariable("SPARK_HOME",       "c:\hdp\spark",             "User")
+[Environment]::SetEnvironmentVariable("HCAT_HOME",        "c:\hdp\hive\hcatalog",     "User")
+[Environment]::SetEnvironmentVariable("HADOOP_CONF_DIR",  "c:\hdp\hadoop\etc\hadoop", "User")
+[Environment]::SetEnvironmentVariable("YARN_CONF_DIR",    "c:\hdp\hadoop\etc\hadoop", "User")
+[Environment]::SetEnvironmentVariable("PATH",             "c:\hdp\hadoop\bin;c:\hdp\hadoop\sbin;c:\hdp\hive\bin;c:\hdp\spark\bin;C:\Python;c:\Java\bin", "User")
