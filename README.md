@@ -58,7 +58,7 @@ I have it uploaded
 ### 6. start hadoop dfs
     %HADOOP_HOME%\sbin\start-dfs.cmd
 
-    _REM you may receive warning that above method will be deprecated, here is the new way_
+    REM you may receive warning that above method will be deprecated, here is the new way
 
     hdfs namenode
     hdfs datanode
@@ -66,8 +66,8 @@ I have it uploaded
 ### 7. start yarn
     %HADOOP_HOME%\sbin\start-yarn.cmd
 
-    _REM you may receive warning that above method will be deprecated, here is the new way_
-
+    REM or start resource manager and node manager separately
+ 
     yarn resourcemanager
     yarn nodemanager
 
@@ -76,12 +76,12 @@ yes.
 
 ### 8. create hive data warehouse structure (folders) in hdfs
 
-    %HADOOP_HOME%/bin/hadoop fs -mkdir       /tmp
-    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user
-    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user/hive
-    %HADOOP_HOME%/bin/hadoop fs -mkdir       /user/hive/warehouse
-    %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /tmp
-    %HADOOP_HOME%/bin/hadoop fs -chmod g+w   /user/hive/warehouse
+    %HADOOP_HOME%/bin/hdfs dfs -mkdir       /tmp
+    %HADOOP_HOME%/bin/hdfs dfs -mkdir       /user
+    %HADOOP_HOME%/bin/hdfs dfs -mkdir       /user/hive
+    %HADOOP_HOME%/bin/hdfs dfs -mkdir       /user/hive/warehouse
+    %HADOOP_HOME%/bin/hdfs dfs -chmod g+w   /tmp
+    %HADOOP_HOME%/bin/hdfs dfs -chmod g+w   /user/hive/warehouse
 
 
 ### 9. configure hive metastore (optional: as I am running in azure VM so why not use like to use SQL Azure)
