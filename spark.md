@@ -80,4 +80,11 @@ kinda need this for my linux box for standalone mode as default is user/hive/war
 If you notice that the spark jobs are executed on a single node in a cluster environment, there is a [fairly good explanation][1] for it.
 
 
+### SparkR
+
+Well, it is exciting, but sorta waiting for the binary version of it. Not keen into build it myself.
+
+
+
+
 [1]: https://issues.apache.org/jira/browse/SPARK-4360 "only run on single node in a cluster"
