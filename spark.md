@@ -85,13 +85,23 @@ If you notice that the spark jobs are executed on a single node in a cluster env
 Well, it is exciting, but sorta waiting for the binary version of it. Not keen into build it myself.
 [Click here][2] to download the latest 1.4 nightly build, be aware of the errors, and use on your own risk.
 
+    
+    # the code is directly from apache spark github reading
+    # in RStudio 
+    sc <- sparkR.init(master="yarn-client")  # though yarn-client give me trouble
+    sc <- sparkR.init()  # this will just do fine with local standalone spark
+    
+    # get sqlContext, I just been lazy sqlctx
+    sqlctx <- sparkRSQL.init(sc)  
+
     # hdfs dfs -copyFromLocal $SPARK_HOME/examples/src/main/resources/* /user/spock
     path = '/user/spock/people.json'
-    peopleDF <- jsonFile(sqlContext, path)
+    peopleDF <- jsonFile(sqlctx, path)
     printSchema(peopleDF)
     
+    # register temp table and experience the sql query
     registerTempTable(peopleDF, "people")
-    teenagers <- sql(sqlContext, "SELECT name FROM people WHERE age >= 13 AND age <= 19")
+    teenagers <- sql(sqlctx, "SELECT name FROM people WHERE age >= 13 AND age <= 19")
     teenagersLocalDF <- collect(teenagers)
 
     dim(teenagersLocalDF)
