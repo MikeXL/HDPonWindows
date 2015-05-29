@@ -85,19 +85,19 @@ If you notice that the spark jobs are executed on a single node in a cluster env
 Well, it is exciting, but sorta waiting for the binary version of it. Not keen into build it myself.
 [Click here][2] to download the latest 1.4 nightly build, be aware of the errors, and use on your own risk.
 
-  # hdfs dfs -copyFromLocal $SPARK_HOME/examples/src/main/resources/* /user/spock
-  path = '/user/spock/people.json'
-  peopleDF <- jsonFile(sqlContext, path)
-  printSchema(peopleDF)
+    # hdfs dfs -copyFromLocal $SPARK_HOME/examples/src/main/resources/* /user/spock
+    path = '/user/spock/people.json'
+    peopleDF <- jsonFile(sqlContext, path)
+    printSchema(peopleDF)
+    
+    registerTempTable(peopleDF, "people")
+    teenagers <- sql(sqlContext, "SELECT name FROM people WHERE age >= 13 AND age <= 19")
+    teenagersLocalDF <- collect(teenagers)
 
-  registerTempTable(peopleDF, "people")
-  teenagers <- sql(sqlContext, "SELECT name FROM people WHERE age >= 13 AND age <= 19")
-  teenagersLocalDF <- collect(teenagers)
-
-  dim(teenagersLocalDF)
-  names(teenagersLocalDF)
-  head(teenagersLocalDF)
-
+    dim(teenagersLocalDF)
+    names(teenagersLocalDF)
+    head(teenagersLocalDF)
+    
 
 
 [1]: https://issues.apache.org/jira/browse/SPARK-4360 "only run on single node in a cluster"
