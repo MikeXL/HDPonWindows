@@ -95,7 +95,9 @@ Well, it is exciting, but sorta waiting for the binary version of it. Not keen i
     Sys.setenv(YARN_CONF_DIR = '/etc/hadoop/conf')
     
     ### setup and load the sparkr lib
-    .libPaths(c("/opt/spark/lib", .libPaths()))
+    ### you can make it more dynamic by using $SPARK_HOME
+    ###
+    .libPaths(c("/opt/spark/R/lib", .libPaths()))
     library(sparkR)
     
     ### start in yarn-client mode
