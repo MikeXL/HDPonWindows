@@ -1,10 +1,7 @@
 H2O
 ============
 
-Download the hadoop jar from H2O website, and then run this inside HDP sandbox
+## Run in a multi-node cluster
+Download H2O and put into /opt/h2o for every single node. Then assume you wanna start 3 nodes with 2GB memory:
 
-    hadoop jar h2odriver.jar -nodes 1 -mapperXmx 1g -output hdfsOutputDirName &
-
-
-
-
+    hadoop jar h2odriver.jar -nodes 3 -mapperXmx 2g -output hdfsWater &
