@@ -85,30 +85,31 @@ If you notice that the spark jobs are executed on a single node in a cluster env
 Well, it is exciting, but sorta waiting for the binary version of it. Not keen into build it myself.
 [Click here][2] to download the latest 1.4 nightly build, be aware of the errors, and use on your own risk.
 
-    
+
     ### the code is directly from apache spark github reading
-    ### in RStudio 
-    
-    ### set the environment variables for yarn 
+    ### in RStudio
+
+    ### set the environment variables for yarn
     Sys.setenv(SPARK_HOME = '/opt/spark')
     Sys.setenv(HADOOP_CONF_DIR = '/etc/hadoop/conf')
     Sys.setenv(YARN_CONF_DIR = '/etc/hadoop/conf')
-    
+
     ### setup and load the sparkr lib
     ### you can make it more dynamic by using $SPARK_HOME
     ###
     .libPaths(c("/opt/spark/R/lib", .libPaths()))
     library(sparkR)
-    
+
     ### start in yarn-client mode
-    ### ! on hdp, ensure the hdp version is set in 
+    ### ! on hdp, ensure the hdp version is set in
     ### !        $SPARK_HOME/conf/spark-defaults.conf
-    ### 
-    sc <- sparkR.init(master="yarn-client")  
-    
+    ###
+    ### sc <- sparkR.init(master="yarn-client")  
+    sc <- sparkR.init("yarn-client") 
+
     ### or else start in standalone
     sc <- sparkR.init()  
-    
+
     ### get sqlContext, I just been lazy sqlctx
     sqlctx <- sparkRSQL.init(sc)  
 
@@ -118,8 +119,8 @@ Well, it is exciting, but sorta waiting for the binary version of it. Not keen i
     path = '/user/spock/people.json'
     peopleDF <- jsonFile(sqlctx, path)
     printSchema(peopleDF)
-    
-    
+
+
     ### register temp table and experience the sql query
     registerTempTable(peopleDF, "people")
     teenagers <- sql(sqlctx, "SELECT name FROM people WHERE age >= 13 AND age <= 19")
@@ -128,7 +129,7 @@ Well, it is exciting, but sorta waiting for the binary version of it. Not keen i
     dim(teenagersLocalDF)
     names(teenagersLocalDF)
     head(teenagersLocalDF)
-    
+
 
 
 [1]: https://issues.apache.org/jira/browse/SPARK-4360 "only run on single node in a cluster"
